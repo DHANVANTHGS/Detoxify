@@ -10,7 +10,7 @@ const Ambulance=require("../../models/ambulance");
 const login=expressAsyncHandler(async(req,res)=>{
         const email=req.body.email;
         const pass=req.body.pass;
-        const user = await Users.findOne({gmail:email});
+        const user = await Users.findOne({gmail:email}); 
         if(!user){
             console.log("No user found");
             return res.send({message: 'nuf' });
